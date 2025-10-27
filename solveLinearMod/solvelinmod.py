@@ -219,4 +219,3 @@ def solve_linear_mod(equations, bounds, verbose=False, **lll_args):
             res[var] = row[NR + vi] + guesses[var]
 
         return res
-ENVI
