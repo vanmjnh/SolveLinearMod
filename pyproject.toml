@@ -3,11 +3,18 @@ requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "solvelinmod"
+name = "solveLinearMod"
 version = "0.1.0"
 description = "Solve linear modular systems with LLL (Robert Xiao's solver), packaged for Sage."
-readme = "README.md"
+readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.8"
-# Không kê dependencies vì chạy trong Sage; bạn sẽ import từ sageall.
-authors = [{name = "Original solver by Robert Xiao (nneonneo); packaged by <your name>"}]
-license = {text = "See upstream license / attribution in source"}
+authors = [
+  {name = "Robert Xiao (nneonneo)"},
+  {name = "Your Name (packager)"}
+]
+
+license = {text = "Original solver by Robert Xiao (nneonneo); packaged for Sage usage."}
+
+[tool.setuptools]
+packages = ["solveLinearMod"]
+
